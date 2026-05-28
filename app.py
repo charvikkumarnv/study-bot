@@ -8,7 +8,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 @app.route("/", methods=["GET"])
 def home():
-    return render_template("index.html", reply=reply)
+    return render_template("index.html", reply="")
 
 @app.route("/chat", methods=["POST"])
 def chat():
